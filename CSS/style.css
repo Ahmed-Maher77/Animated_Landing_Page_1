@@ -1,0 +1,289 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+::selection {
+    background-color: #2d910c;
+    color: var(--mainColor);
+}
+/* End Global Rules */
+
+/* Start Variables */
+:root {
+    --main-color: #fff;
+    --main-transition: 0.3s;
+}
+/* End Variables */
+
+/* Start Components */
+a {
+    text-decoration: none;
+}
+/* End Components */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#landing {
+    height: 100vh;
+    background: url(https://i.ibb.co/F7DYbYM/background.png) no-repeat center;
+    background-size: cover;
+    color: var(--main-color, #fff);
+    position: relative;
+    overflow: hidden;
+}
+#landing .container {
+    height: 100%;
+    position: relative;
+}
+#landing nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+#landing nav a {
+    width: 140px;
+}
+#landing nav a img {
+    max-width: 100%
+}
+.button {
+    padding: 10px 25px;
+    border-radius: 35px;
+    width: fit-content;
+    font-size: 1.1rem;
+    color: var(--main-color, #fff);
+    background-color: transparent;
+    border: thin solid var(--main-color, #fff);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    transition: var(--main-transition, 0.3s);
+}
+.button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color, #fff);
+    transition: var(--main-transition, 0.3s);
+    z-index: -1;
+}
+.button:hover::before {
+    width: 100%;
+}
+.button:hover {
+    color: #0b9f92
+}
+#landing .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#landing .text h1 {
+    font-size: 3.2rem;
+    margin: 15px 0 50px;
+}
+#landing .text a {
+    display: inline-block;
+    font-weight: normal;
+}
+#landing aside {
+    position: absolute;
+    background-image: linear-gradient(rgb(0, 84, 93), rgb(0 7 41 / 60%));
+    width: 100%;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+#landing aside > img {
+    display: block;
+    width: 25px;
+    cursor: pointer;
+}
+#landing .social {
+    display: flex;
+}
+#landing .social a,
+#landing .share a {
+    width: 30px;
+    display: block;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#landing .social a img,
+#landing .share a img {
+    max-width: 100%;
+}
+#landing .share {
+    display: flex;
+    bottom: 30px;
+    right: 50%;
+}
+#landing .share a[title ^="Info"]{
+    position: relative;
+}
+#landing .share a[title ^="Info"]::before,
+#landing .share a[title ^="Info"]::after {
+    position: absolute;
+    display: none;
+}
+#landing .share a[title ^="Info"]::before {
+    content: "Copyright © 2023 Free-css.com By Ahmed Maher";
+    width: 250px;
+    padding: 15px;
+    top: -110px;
+    left: -35px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1.8;
+    color: var(--main-color, #fff);
+    background-color: #0b9f92;
+}
+#landing .share a[title ^="Info"]::after {
+    content: "";
+    border: 10px solid transparent;
+    border-left-color: #0b9f92;
+    left: -50%;
+    top: -23px;
+    transform: rotate(90deg) translateY(-100%);
+}
+#landing .share a[title ^="Info"]:hover::before {
+    display: block;
+}
+#landing .bubbles {
+    width: 100%;
+    display: flex;
+    background-color: #0b9f92;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+}
+#landing .bubbles img {
+    width: 35px;
+    animation: bubbles 7s linear infinite;
+}
+#landing .bubbles img:first-child {
+    animation-delay: 1s;
+}
+#landing .bubbles img:nth-child(2),
+#landing .bubbles img:nth-child(5) {
+    animation-delay: 3s;
+}
+#landing .bubbles img:nth-child(5) {
+    width: 25px;
+    animation-delay: 4.5s;
+}
+#landing .bubbles img:nth-child(5) {
+    animation-delay: 3s;
+}
+#landing .bubbles img:nth-child(3),
+#landing .bubbles img:nth-child(6) {
+    animation-delay: 5s;
+}
+#landing .bubbles img:nth-child(6) {
+    width: 50px;
+    animation-delay: 6s;
+}
+#landing .bubbles img:last-of-type {
+    width: 35px;
+    animation-delay: 7s;
+}
+@keyframes bubbles {
+    0% {
+        /* transform: translateY(0); */
+        opacity: 0
+    }
+    50%,70% {
+        opacity: 1
+    }
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+    #landing .text {
+        left: 15px;
+        transform: translate(0, -50%);
+        text-align: left;
+    }
+    #landing .share a[title ^="Info"]::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #landing .share a[title ^="Info"]:hover::after {
+        display: block;
+    }
+}
+
+/* X-Large devices (desktops, 1200px and up) */
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+	}
+    #landing aside {
+    width: 50px;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    }
+    #landing aside > img {
+    margin: 30px auto;
+    }
+    #landing .social {
+        display: block;
+        margin-top: 50vh;
+        transform: translateY(calc(-50% - 30px));
+    }
+    #landing .social a,
+    #landing .share a {
+        margin: 5px auto;
+    }
+    #landing .share {
+        display: block;
+        position: absolute;
+        transform: translateX(50%);
+    }
+    #landing .share a[title ^="Info"]::before {
+        left: -303px;
+        top: 46%;
+        transform: translateY(-50%);
+    }
+    #landing .share a[title ^="Info"]::after {
+        left: -25px;
+        top: 5px;
+        transform: rotate(0deg);
+    }
+}
