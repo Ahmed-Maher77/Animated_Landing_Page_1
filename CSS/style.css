@@ -36,6 +36,7 @@ a {
 }
 #landing {
     height: 100vh;
+	min-height: 800px;
     background: linear-gradient(#00000026, #00000020) 
                 ,url(https://i.ibb.co/F7DYbYM/background.png) no-repeat center;
     background-size: cover;
