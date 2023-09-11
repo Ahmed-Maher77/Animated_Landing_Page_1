@@ -4,4 +4,4 @@
 Animated Landing Page. When you see this page, you feel as if you are in the depths of the sea and see bubbles heading towards the top
 
 ##### Used Technologies: HTML/HTML5 - CSS/CSS3 - Responsive Design - Git
-##### Demo: https://ahmed-maher77.github.io/Animated_Landing_Page_1/
+##### Demo (Live): https://ahmed-maher77.github.io/Animated_Landing_Page_1/
